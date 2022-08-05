@@ -12,6 +12,8 @@ SamplesViewModelUion vmu = new();
 SamplesViewModelJoin vmj = new();
 SamplesViewModelGrouping vmg = new();
 SamplesViewModelAggregate vma = new();
+SamplesViewModelIterate vmi = new();
+SamplesViewModelDeferredExecution vmde = new();
 
 // Call Sample Method
 //var result = vm.GetAllQuery();
@@ -129,7 +131,7 @@ SamplesViewModelAggregate vma = new();
 //var result = vmg.GroupByDistinctQuery();
 
 // Call Aggregate methods
-var result = vma.CountQuery();
+//var result = vma.CountQuery();
 //var result = vma.CountMethod();
 //var result = vma.CountFilteredQuery();
 //var result = vma.CountFilteredMethod();
@@ -152,6 +154,27 @@ var result = vma.CountQuery();
 //var result = vma.AggregateUsingGroupByQuery();
 //var result = vma.AggregateUsingGroupByMethod();
 //var result = vma.AggregateMoreEfficientMethod();
+
+//Call the iteration methods
+//var result = vmi.ForEachQuery();
+//var result = vmi.ForEachMethod();
+//var result = vmi.ForEachSubQueryQuery();
+//var result = vmi.ForEachSubQueryMethod();
+//var result = vmi.ForEachQueryCallingMethodQuery();
+//var result = vmi.ForEachQueryCallingMethod();
+
+//Bonus
+//var result = vmi.ForEachQueryCalculateNameLength();
+
+//Calling the Deffered execution methods
+var result = vmde.DeferredExecution();
+//var result = vmde.DeferredExecutionEnumerator();
+//var result = vmde.UsingWhereAndTake();
+//var result = vmde.UsingSimpleFilter();
+//var result = vmde.UsingSimpleFilterAndTake();
+//var result = vmde.UsingYield();
+//var result = vmde.UsingYieldAndTake();
+//var result = vmde.UsingYieldAndOrderBy();
 
 // Display Results
 vm.Display(result);
